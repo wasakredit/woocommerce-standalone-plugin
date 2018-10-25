@@ -1,0 +1,108 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wasa Kredit Checkout (Standalone)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-25 16:39+0000\n"
+"PO-Revision-Date: 2018-10-25 16:43+0000\n"
+"Last-Translator: admin <ehandel@wasakredit.se>\n"
+"Language-Team: Svenska\n"
+"Language: sv_SE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: includes/class-wasa-kredit-checkout-setup.php:93
+msgctxt "Page title"
+msgid "Wasa Checkout (Standalone)"
+msgstr "Wasa Checkout (fristående)"
+
+#: includes/class-wasa-kredit-checkout-setup.php:94
+msgctxt "Page slug"
+msgid "wasa-checkout-standalone"
+msgstr "wasa-checkout-standalone"
+
+#: includes/class-wasa-kredit-checkout.php:27
+msgid "Standalone settings"
+msgstr "Inställningar för alternativ kassa"
+
+#: includes/class-wasa-kredit-checkout.php:31
+msgid "Woo checkout page"
+msgstr "Sida för standardkassan"
+
+#: includes/class-wasa-kredit-checkout.php:33
+msgid "Select standard WooCommerce checkout page"
+msgstr "Välj WooCommerces standardkassa."
+
+#: includes/class-wasa-kredit-checkout.php:40
+msgid "Woo checkout title"
+msgstr "Rubrik för standardkassan"
+
+#: includes/class-wasa-kredit-checkout.php:42
+msgid "Select title for the standard WooCommerce checkout page"
+msgstr ""
+"Ange rubrik för standardkassan, till exempel \"Banköverföring, leasing\"."
+
+#: includes/class-wasa-kredit-checkout.php:45
+#: includes/class-wasa-kredit-checkout.php:53
+msgid "Other payment types"
+msgstr "Övriga betalsätt"
+
+#: includes/class-wasa-kredit-checkout.php:48
+msgid "Woo checkout description"
+msgstr "WooCommerces standardkassa"
+
+#: includes/class-wasa-kredit-checkout.php:50
+msgid "Select description for the standard WooCommerce checkout page"
+msgstr ""
+"Ange en länkbeskrivning för standardkassan, till exempel \"Betala genom bank "
+"eller finansiera ditt köp genom Wasa Kredit\"."
+
+#: includes/class-wasa-kredit-checkout.php:56
+msgid "Alternative checkout page"
+msgstr "Sida för alternativ kassa"
+
+#: includes/class-wasa-kredit-checkout.php:58
+msgid "Select an alternative checkout page."
+msgstr "Välj en alternativ kassasida."
+
+#: includes/class-wasa-kredit-checkout.php:65
+msgid "Alternative checkout title"
+msgstr "Rubrik för alternativ kassa"
+
+#: includes/class-wasa-kredit-checkout.php:67
+msgid "Select title for the alternative checkout page."
+msgstr ""
+"Ange en rubrik för den alternativa kassasidan, t.ex. vilka betalsätt som som "
+"är tillgängliga."
+
+#: includes/class-wasa-kredit-checkout.php:73
+msgid "Alternative checkout description"
+msgstr "Alternativ kassasida"
+
+#: includes/class-wasa-kredit-checkout.php:75
+msgid "Select description for the alternative checkout page."
+msgstr ""
+"Ange en beskrivande text för den alternativa kassasidan, t.ex. vilka "
+"betalsätt som som är tillgängliga."
+
+#. Name of the plugin
+msgid "Wasa Kredit Checkout (Standalone)"
+msgstr "Wasa Kredit Checkout (fristående)"
+
+#. Description of the plugin
+msgid "Wasa Kredit Checkout offers financing as a payment method for B2B."
+msgstr "Utökad funktionalitet för Wasa Kredits kassa."
+
+#. URI of the plugin
+msgid "https://github.com/wasakredit/woocommerce-plugin"
+msgstr "https://github.com/wasakredit/woocommerce-plugin"
+
+#. Author of the plugin
+msgid "Wasa Kredit"
+msgstr "Wasa Kredit"
+
+#. Author URI of the plugin
+msgid "https://developer.wasakredit.se"
+msgstr ""
