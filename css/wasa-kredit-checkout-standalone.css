@@ -1,0 +1,8 @@
+
+.wasa-kredit-checkout-standalone {}
+.wasa-kredit-checkout-standalone.router { display: flex; }
+.wasa-kredit-checkout-standalone.router .buttons-2 { display: flex; flex-direction: row; flex: 50%; margin: .1em; }
+.wasa-kredit-checkout-standalone.router .button { display: flex; flex-direction: column; }
+.wasa-kredit-checkout-standalone.router .button .title { font-weight: bold; }
+.wasa-kredit-checkout-standalone.router .button .title::after { content: ' »' }
+.wasa-kredit-checkout-standalone.router .button .description { font-weight: normal; }

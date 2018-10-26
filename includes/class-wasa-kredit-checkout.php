@@ -7,7 +7,8 @@ class Wasa_Kredit_Checkout_Standalone {
 	function run() {
 		// Include important plugin files
 		self::load_dependencies();
-	
+		self::add_styles();
+
 		add_shortcode('wasa_kredit_checkout_router', 'Wasa_Kredit_Checkout_Standalone::render_page');
 		add_filter('wasa_kredit_settings', 'Wasa_Kredit_Checkout_Standalone::add_settings');		
 		add_action('plugins_loaded', 'Wasa_Kredit_Checkout_Standalone::set_locale');
@@ -15,6 +16,16 @@ class Wasa_Kredit_Checkout_Standalone {
 
 	function load_dependencies() {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wasa-kredit-checkout-setup.php';
+	}
+
+	function add_styles() {
+		wp_enqueue_style(
+			'wasa-kredit-checkout-standalone',
+			plugin_dir_url( dirname( __FILE__ ) ) . 'css/wasa-kredit-checkout-standalone.css',
+			array(),
+			WASA_KREDIT_CHECKOUT_STANDALONE_VERSION,
+			'all'
+		);
 	}
 
 	function render_page() {
