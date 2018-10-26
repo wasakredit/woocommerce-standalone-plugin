@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @wordpress-plugin
  * Plugin Name:       Wasa Kredit Checkout (Standalone)
  * Plugin URI:        https://github.com/wasakredit/woocommerce-plugin
- * Description:       Wasa Kredit Checkout offers financing as a payment method for B2B. This is 
+ * Description:       Wasa Kredit Checkout offers financing as a payment method for B2B.
  * Author:            Wasa Kredit
  * Version:           1.0.0
  * Author URI:        https://developer.wasakredit.se
