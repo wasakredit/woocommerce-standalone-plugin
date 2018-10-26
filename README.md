@@ -16,8 +16,6 @@ must be installed in addition to this plug-in for it to work.
 2. Activate the plugin through the "Plugins" menu in WordPress.
 3. Go WooCommerce Settings –> Payment Gateways and configure your Wasa Kredit settings.
 
-lass-wasa-kredit-checkout-page.php: Controls the page for the checkout, redirects to our template.
-
 # Translations
 
 The plugin uses `__("Default name", "wasa-kredit-checkout-standalone")` to make it possible to translate it.
