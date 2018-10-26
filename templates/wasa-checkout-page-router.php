@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 	<h3 id="order_BETALSÄTT_heading"><?php _e( 'Välj betalsätt', 'woocommerce' ); ?></h3>
-	<div id="order_review22" class="wasa-kredit-checkout-review-order" style="display: flex">		
+	<div id="order_review22" class="wasa-kredit-checkout-standalone router" style="display: flex">		
 		<?php
 			PaymentOptionLayout(Wasa_Kredit_Checkout_Standalone_Setup::WooCommerce_Checkout_Page());
 			PaymentOptionLayout(Wasa_Kredit_Checkout_Standalone_Setup::Alternative_Checkout_Page());			
@@ -42,10 +42,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php
 	function PaymentOptionLayout($page){		
-		echo('<div class="wasa-kredit-checkout-page-payment-option" style="display: flex; flex: 50%">');				
-			echo('<div style="display: flex; flex-direction: column">');
+		echo('<div class="buttons-2">');				
+			echo('<div class="button">');
 				echo('<a href="' . $page['link'] . '">');
-					echo('<div><strong>' . $page['title'] . '</strong></div>');
+					echo('<div class="title">' . $page['title'] . '</div>');
 					echo('<div class="description">' . $page['description'] . '</div>');
 				echo('</a>');
 			echo('</div>');				
