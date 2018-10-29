@@ -56,10 +56,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	public static function Checkout_Page_Id_Key() { return 'wc_wasa_checkout_page_id'; }
 
-	public static function Checkout_Page_Id() { return get_option( Wasa_Kredit_Checkout_Standalone_Setup::Checkout_Page_Id_Key() ); }
+	public static function Checkout_Page_Id() { return get_option(self::Checkout_Page_Id_Key()); }
 
 	public static function Checkout_Page_Exists(){
-		$found_checkout_post = get_post( Wasa_Kredit_Checkout_Standalone_Setup::Checkout_Page_Id() );
+		$found_checkout_post = get_post(self::Checkout_Page_Id());
 		if( is_null( $found_checkout_post ) )
 			return false;
 
@@ -75,7 +75,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	private static function create_checkout_page() {  
 		$should_create_checkout_page = false;
 
-		$checkout_page_id = get_option( Wasa_Kredit_Checkout_Standalone_Setup::Checkout_Page_Id_Key() );
+		$checkout_page_id = get_option(self::Checkout_Page_Id_Key() );
 
 		if( ! $checkout_page_id ) {
 			$should_create_checkout_page = true;
@@ -96,13 +96,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 			);
 
 			$checkout_post_id = wp_insert_post( $checkout_page );
-			update_option( Wasa_Kredit_Checkout_Standalone_Setup::Checkout_Page_Id_Key(), $checkout_post_id );
+			update_option(self::Checkout_Page_Id_Key(), $checkout_post_id );
 		}
 	}
 
 	private static function delete_checkout_page() {  
 
-		$checkout_page_id = get_option( Wasa_Kredit_Checkout_Standalone_Setup::Checkout_Page_Id_Key() );
+		$checkout_page_id = get_option(self::Checkout_Page_Id_Key() );
 
 		if(!$checkout_page_id)
 			return;

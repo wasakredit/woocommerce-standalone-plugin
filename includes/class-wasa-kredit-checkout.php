@@ -4,35 +4,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class Wasa_Kredit_Checkout_Standalone {
-	function run() {
-		// Include important plugin files
+	public static function run() {
 		self::load_dependencies();
 		self::add_styles();
-
+		
 		add_shortcode('wasa_kredit_checkout_router', 'Wasa_Kredit_Checkout_Standalone::render_page');
 		add_filter('wasa_kredit_settings', 'Wasa_Kredit_Checkout_Standalone::add_settings');		
 		add_action('plugins_loaded', 'Wasa_Kredit_Checkout_Standalone::set_locale');
 	}
 
-	function load_dependencies() {
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wasa-kredit-checkout-setup.php';
-	}
-
-	function add_styles() {
-		wp_enqueue_style(
-			'wasa-kredit-checkout-standalone',
-			plugin_dir_url( dirname( __FILE__ ) ) . 'css/wasa-kredit-checkout-standalone.css',
-			array(),
-			WASA_KREDIT_CHECKOUT_STANDALONE_VERSION,
-			'all'
-		);
-	}
-
-	function render_page() {
+	public static function render_page() {
 		include(plugin_dir_path( __FILE__ ) . '../templates/wasa-checkout-page-router.php');		
 	}
 
-	function add_settings($settings) {
+	public static function add_settings($settings) {
 		return array_merge($settings, array(
 			'standalone_section' => array(
 				'title' => __( 'Standalone settings', 'wasa-kredit-checkout-standalone' ),
@@ -90,7 +75,7 @@ class Wasa_Kredit_Checkout_Standalone {
 			)));
 	}
 
-	function set_locale() {
+	public static function set_locale() {
 		load_plugin_textdomain(
 			'wasa-kredit-checkout-standalone',
 			false,
@@ -98,7 +83,21 @@ class Wasa_Kredit_Checkout_Standalone {
 		);
 	}
 
-	function get_top_pages() {
+	private static function load_dependencies() {
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wasa-kredit-checkout-setup.php';
+	}
+
+	private static function add_styles() {
+		wp_enqueue_style(
+			'wasa-kredit-checkout-standalone',
+			plugin_dir_url( dirname( __FILE__ ) ) . 'css/wasa-kredit-checkout-standalone.css',
+			array(),
+			WASA_KREDIT_CHECKOUT_STANDALONE_VERSION,
+			'all'
+		);
+	}
+
+	private static function get_top_pages() {
 		$pages = get_pages();
 		$options = array();
 
@@ -108,4 +107,5 @@ class Wasa_Kredit_Checkout_Standalone {
 		}
 		return $options;
 	}
+	
 }
